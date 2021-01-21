@@ -58,7 +58,7 @@
                 <h5 class="uppercase text-center">Lets work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="name" class="form-control" placeholder="Name" 
                             required/>
                         <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" 
@@ -136,14 +136,13 @@
             </div>
         </div>
     </footer>
-    
+    <script src="assets/js/sendEmail.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script  type="text/javascript">
         (function() {
         emailjs.init("user_ecCjI26dS3Vz7adME8AZl");
-        emailjs.send("service_qifblcw", "rosie",{name: "Eddie", notes:"The Project that i want is..."});
         })();
+        </script>
         
-    </script>
 </body>
 </html>
